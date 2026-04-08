@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result - HematoVision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔬 HematoVision</h1>
+            <p class="subtitle">Classification Result</p>
+        </div>
+        <div class="card result-card">
+            <h2>🩸 Prediction Result</h2>
+            <div class="result-image-container">
+                <img src="{{ image_path }}" alt="Uploaded Blood Cell" class="result-image">
+            </div>
+            <div class="result-details">
+                <div class="result-row">
+                    <span class="result-label">Predicted Class:</span>
+                    <span class="result-value prediction-class">{{ prediction }}</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">Confidence:</span>
+                    <span class="result-value confidence-value">{{ confidence }}%</span>
+                </div>
+                <div class="confidence-bar-container">
+                    <div class="confidence-bar" style="width: {{ confidence }}%"></div>
+                </div>
+            </div>
+            <a href="{{ url_for('home') }}" class="btn-back">📤 Upload Another Image</a>
+        </div>
+        <div class="footer">
+            <p>HematoVision &copy; 2025 | Powered by CNN & TensorFlow</p>
+        </div>
+    </div>
+</body>
+</html>

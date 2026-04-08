@@ -1,0 +1,306 @@
+/* ============================================================
+   HematoVision - Stylesheet
+   Blood Cell Classification Web App
+   ============================================================ */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    color: #e0e0e0;
+}
+
+/* Container */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #a0aec0;
+    font-weight: 300;
+}
+
+/* Card */
+.card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 25px;
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #a0aec0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Flash messages */
+.flash-messages {
+    margin-bottom: 18px;
+}
+
+.flash-message {
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.flash-error {
+    background: rgba(245, 101, 101, 0.14);
+    border: 1px solid rgba(245, 101, 101, 0.4);
+    color: #fed7d7;
+}
+
+/* Upload Area */
+.upload-area {
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.upload-area:hover {
+    border-color: #3a7bd5;
+    background: rgba(58, 123, 213, 0.08);
+}
+
+.upload-area.dragover {
+    border-color: #00d2ff;
+    background: rgba(0, 210, 255, 0.12);
+    transform: scale(1.01);
+}
+
+.upload-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.upload-text {
+    font-size: 1.1rem;
+    color: #cbd5e0;
+    margin-bottom: 5px;
+}
+
+.upload-hint {
+    font-size: 0.8rem;
+    color: #718096;
+}
+
+.image-preview {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 12px;
+    margin-top: 10px;
+    object-fit: contain;
+}
+
+.file-name {
+    text-align: center;
+    color: #63b3ed;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    min-height: 20px;
+}
+
+/* Predict Button */
+.btn-predict {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-predict:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(58, 123, 213, 0.4);
+}
+
+.btn-predict:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Info Section */
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.info-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #cbd5e0;
+    transition: transform 0.2s;
+}
+
+.info-box:hover {
+    transform: translateY(-3px);
+}
+
+.info-icon {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+}
+
+/* Result Page */
+.result-image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.result-image {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    object-fit: contain;
+}
+
+.result-details {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+    padding: 20px 25px;
+    margin: 20px 0;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.result-row + .result-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.result-label {
+    color: #a0aec0;
+    font-size: 1rem;
+}
+
+.result-value {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.prediction-class {
+    color: #48bb78;
+    font-size: 1.3rem;
+}
+
+.confidence-value {
+    color: #63b3ed;
+}
+
+/* Confidence Bar */
+.confidence-bar-container {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.confidence-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #48bb78, #38a169);
+    border-radius: 5px;
+    transition: width 1s ease;
+}
+
+/* Back Button */
+.btn-back {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-back:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(58, 123, 213, 0.4);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #718096;
+    font-size: 0.8rem;
+    padding: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header h1 { font-size: 1.8rem; }
+    .info-section { grid-template-columns: repeat(2, 1fr); }
+    .card { padding: 25px 20px; }
+}
