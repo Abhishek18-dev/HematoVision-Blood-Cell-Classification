@@ -35,7 +35,7 @@ python app.py
 
 ## 7. Demo
 - Home Page screenshot:
-![Home Page](screenshots/home_page.png)
+![Home Page](HematoVision/screenshots/home_page.png)
 - Prediction Result screenshot:
-![Prediction Result](screenshots/result_page.png)
+![Prediction Result](HematoVision/screenshots/result_page.png)
 - Demo video (optional): add your link here
