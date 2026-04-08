@@ -1,5 +1,5 @@
 # Blood cell classification web application using TensorFlow/Keras CNN model
-# Provides REST API endpoints for image upload and inference
+# Provides REST API endpoints for image upload and inference.
 
 import os
 import uuid
