@@ -4,7 +4,7 @@ HematoVision - Blood Cell Classification using Deep Learning and Flask
 ## 2. Objective
 HematoVision is a Flask web application that classifies blood cell microscope images into four classes.
 It uses a trained CNN model for fast inference from uploaded images.
-The project is kept clean, lightweight, and submission-ready.
+The project is kept clean, lightweight.
 
 ## 3. Dataset
 - Source: Kaggle Blood Cell Dataset
