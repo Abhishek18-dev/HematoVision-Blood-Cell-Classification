@@ -38,4 +38,4 @@ python app.py
 ![Home Page](HematoVision/screenshots/home_page.png)
 - Prediction Result screenshot:
 ![Prediction Result](HematoVision/screenshots/result_page.png)
-- Demo video (optional): add your link here
+- Demo video : https://drive.google.com/file/d/1x5eGXu-fmqSz3QWw7-OVuILhRIJRnI-M/view?usp=sharing
